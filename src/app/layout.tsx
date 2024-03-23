@@ -7,11 +7,14 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Next Starter",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+type Props = Readonly<{
+  children: ReactNode;
+}>;
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
